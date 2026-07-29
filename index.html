@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="CHOICE — The AI-powered prediction market platform where social discourse becomes tradable. Turn your convictions into positions instantly." />
+  <meta property="og:title" content="CHOICE — AI-Powered Prediction Markets" />
+  <meta property="og:description" content="Turn social discourse into tradable prediction markets. AI-generated, AI-resolved, zero friction." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://choice.markets/" />
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/logo192.png" />
+  <title>CHOICE</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======================== HEADER ======================== -->
+  <header class="header" id="header">
+    <div class="header-content">
+      <div class="header-left">
+        <a href="#home" class="logo-link" aria-label="CHOICE Home">
+          <div class="logo">
+            <svg width="110" height="28" viewBox="0 0 110 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <text x="0" y="22" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#000" letter-spacing="2">CHOICE</text>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <nav class="header-right" aria-label="Main navigation">
+        <a href="#features" class="nav-link" id="nav-features">Features</a>
+        <a href="#markets" class="nav-link" id="nav-markets">Markets</a>
+        <a href="#docs" class="nav-link" id="nav-docs">Docs</a>
+        <a href="https://app.choice.markets" class="nav-link nav-link--app" id="nav-app" target="_blank" rel="noopener noreferrer">App</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="#features" class="mobile-nav-link">Features</a>
+    <a href="#markets" class="mobile-nav-link">Markets</a>
+    <a href="#docs" class="mobile-nav-link">Docs</a>
+    <a href="https://app.choice.markets" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">App ↗</a>
+  </div>
+
+  <main class="home">
+
+    <!-- ======================== PART 1: HERO ======================== -->
+    <section class="part1" id="home" aria-label="Hero">
+      <div class="part1-bg-grid" aria-hidden="true"></div>
+      <div class="part1-noise" aria-hidden="true"></div>
+
+      <div class="content-box">
+        <div class="eyebrow bounce-in-top">
+          <span class="eyebrow-dot"></span>
+          AI-Powered Prediction Markets
+        </div>
+
+        <h1 class="title scale-up-center">
+          <span class="title-red">Where Social</span>
+          <span class="title-white"> Meets Markets</span>
+        </h1>
+
+        <p class="brief">
+          Turn breaking news, debates, and trending narratives into<br />
+          tradable prediction markets — instantly, with zero friction.
+        </p>
+
+        <div class="hero-preview-wrap">
+          <div class="hero-preview" aria-label="Platform preview">
+            <!-- Simulated trading feed -->
+            <div class="feed-item feed-item--1">
+              <div class="feed-item-meta">
+                <span class="feed-tag">POLITICS</span>
+                <span class="feed-vol">Vol $2.4M</span>
+              </div>
+              <p class="feed-question">Will the Fed cut rates in Q3 2025?</p>
+              <div class="feed-bars">
+                <div class="feed-bar yes" style="--pct:62">
+                  <span class="bar-label">YES</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:62%"></div></div>
+                  <span class="bar-pct">62¢</span>
+                </div>
+                <div class="feed-bar no" style="--pct:38">
+                  <span class="bar-label">NO</span>
+                  <div class="bar-track"><div class="bar-fill bar-fill--no" style="width:38%"></div></div>
+                  <span class="bar-pct">38¢</span>
+                </div>
+              </div>
+              <div class="feed-actions">
+                <button class="btn-trade btn-yes" id="trade-yes-1">Buy YES</button>
+                <button class="btn-trade btn-no" id="trade-no-1">Buy NO</button>
+              </div>
+            </div>
+            <div class="feed-item feed-item--2">
+              <div class="feed-item-meta">
+                <span class="feed-tag">CRYPTO</span>
+                <span class="feed-vol">Vol $5.1M</span>
+              </div>
+              <p class="feed-question">Will BTC surpass $120K before 2026?</p>
+              <div class="feed-bars">
+                <div class="feed-bar yes">
+                  <span class="bar-label">YES</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+                  <span class="bar-pct">78¢</span>
+                </div>
+                <div class="feed-bar no">
+                  <span class="bar-label">NO</span>
+                  <div class="bar-track"><div class="bar-fill bar-fill--no" style="width:22%"></div></div>
+                  <span class="bar-pct">22¢</span>
+                </div>
+              </div>
+              <div class="feed-actions">
+                <button class="btn-trade btn-yes" id="trade-yes-2">Buy YES</button>
+                <button class="btn-trade btn-no" id="trade-no-2">Buy NO</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-box">
+          <a href="https://app.choice.markets" class="btn btn-primary" id="cta-launch" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Launch App
+          </a>
+          <a href="#features" class="btn btn-secondary" id="cta-learn">
+            Learn More
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-count="2400">$2.4M</span>
+            <span class="stat-label">Total Volume</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-num">1,200+</span>
+            <span class="stat-label">Active Markets</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-num">98%</span>
+            <span class="stat-label">Resolution Accuracy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-dot"></div>
+      </div>
+    </section>
+
+    <!-- ======================== PART 2: FEATURES ======================== -->
+    <section class="part2" id="features" aria-label="Features">
+      <div class="part2-noise" aria-hidden="true"></div>
+      <div class="content-box">
+        <p class="overline">Platform Features</p>
+        <h2 class="title-max">Built for the Social<br />Age of Finance</h2>
+        <p class="brief-max">
+          We merge social discourse with financial speculation to create<br class="d-none-sm" />
+          the most intuitive prediction market experience on the web.
+        </p>
+
+        <div class="features-grid">
+          <!-- Left large card -->
+          <div class="feature-card feature-card--large" aria-label="AI Market Generation feature">
+            <div class="feature-card-inner">
+              <div class="feature-tag">Core</div>
+              <h3 class="feature-title">AI Market<br />Generation</h3>
+              <p class="feature-text">
+                Our AI continuously monitors X (Twitter), news feeds, and social platforms to identify trending debates and convert them into structured prediction markets — in real time.
+              </p>
+              <div class="feature-visual" aria-hidden="true">
+                <div class="ai-pulse">
+                  <div class="ai-ring ai-ring--1"></div>
+                  <div class="ai-ring ai-ring--2"></div>
+                  <div class="ai-ring ai-ring--3"></div>
+                  <div class="ai-core">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg>
+                  </div>
+                </div>
+                <div class="ai-feed-sim">
+                  <div class="ai-feed-line"></div>
+                  <div class="ai-feed-line ai-feed-line--2"></div>
+                  <div class="ai-feed-line ai-feed-line--3"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-noise" aria-hidden="true"></div>
+          </div>
+
+          <!-- Right column -->
+          <div class="feature-col-right">
+            <div class="feature-card feature-card--sm" aria-label="Hybrid Liquidity feature">
+              <div class="feature-card-inner">
+                <div class="feature-tag">Liquidity</div>
+                <h3 class="feature-title">Hybrid Liquidity Engine</h3>
+                <p class="feature-text">
+                  Order books for high-traffic markets. LMSR for long-tail events. Always liquid, always tradable.
+                </p>
+                <div class="sm-visual" aria-hidden="true">
+                  <div class="orderbook-sim">
+                    <div class="ob-row ob-row--buy" style="--w:80%"><span>$0.62</span></div>
+                    <div class="ob-row ob-row--buy" style="--w:55%"><span>$0.58</span></div>
+                    <div class="ob-row ob-row--sell" style="--w:45%"><span>$0.44</span></div>
+                    <div class="ob-row ob-row--sell" style="--w:65%"><span>$0.38</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-noise" aria-hidden="true"></div>
+            </div>
+
+            <div class="feature-card feature-card--sm" aria-label="AI Resolution feature">
+              <div class="feature-card-inner">
+                <div class="feature-tag">Resolution</div>
+                <h3 class="feature-title">AI-Powered Resolution</h3>
+                <p class="feature-text">
+                  Transparent, rapid settlement using AI. Minimize disputes, maximize trust — even for subjective events.
+                </p>
+                <div class="sm-visual" aria-hidden="true">
+                  <div class="resolution-sim">
+                    <div class="res-check">
+                      <div class="res-check-icon">✓</div>
+                      <div class="res-check-bar"></div>
+                    </div>
+                    <div class="res-label">Market Resolved</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-noise" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== PART 3: PLATFORM DEMO ======================== -->
+    <section class="part3" id="markets" aria-label="Platform demo">
+      <div class="part3-noise" aria-hidden="true"></div>
+      <div class="content-box">
+        <p class="overline overline--dark">How It Works</p>
+        <h2 class="title">Trade Like You Tweet</h2>
+        <div class="part3-content">
+          <div class="part3-visual" aria-label="Platform interface preview">
+            <div class="demo-window">
+              <div class="demo-window-bar">
+                <span class="demo-dot"></span><span class="demo-dot"></span><span class="demo-dot"></span>
+                <span class="demo-url">app.choice.markets</span>
+              </div>
+              <div class="demo-body">
+                <div class="demo-sidebar">
+                  <div class="dsb-item dsb-item--active">🔥 Trending</div>
+                  <div class="dsb-item">📈 Crypto</div>
+                  <div class="dsb-item">🏛 Politics</div>
+                  <div class="dsb-item">⚡ Sports</div>
+                  <div class="dsb-item">🌍 World</div>
+                </div>
+                <div class="demo-feed">
+                  <div class="demo-card demo-card--active">
+                    <div class="dc-header">
+                      <span class="dc-tag">TRENDING</span>
+                      <span class="dc-ends">Ends Jul 31</span>
+                    </div>
+                    <p class="dc-question">Will ETH flip BTC in market cap?</p>
+                    <div class="dc-bars">
+                      <div class="dc-bar-yes">YES <span>45¢</span></div>
+                      <div class="dc-bar-no">NO <span>55¢</span></div>
+                    </div>
+                  </div>
+                  <div class="demo-card">
+                    <div class="dc-header">
+                      <span class="dc-tag">POLITICS</span>
+                      <span class="dc-ends">Ends Aug 5</span>
+                    </div>
+                    <p class="dc-question">New US sanctions on crypto by Q4?</p>
+                    <div class="dc-bars">
+                      <div class="dc-bar-yes">YES <span>31¢</span></div>
+                      <div class="dc-bar-no">NO <span>69¢</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="part3-text">
+            <ol class="steps-list">
+              <li class="step-item">
+                <span class="step-num">01</span>
+                <div>
+                  <h3 class="step-title">Connect Your Account</h3>
+                  <p class="step-desc">Sign in with Google or connect your X account in seconds. No KYC for small positions.</p>
+                </div>
+              </li>
+              <li class="step-item">
+                <span class="step-num">02</span>
+                <div>
+                  <h3 class="step-title">Browse Live Markets</h3>
+                  <p class="step-desc">Explore AI-generated markets trending on social media, news, and current events.</p>
+                </div>
+              </li>
+              <li class="step-item">
+                <span class="step-num">03</span>
+                <div>
+                  <h3 class="step-title">Trade Your Conviction</h3>
+                  <p class="step-desc">Buy YES or NO shares. Prices reflect crowd probability in real time.</p>
+                </div>
+              </li>
+            </ol>
+            <a href="https://app.choice.markets" class="btn btn-red" id="cta-start-trading" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              Start Trading
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== PART 4: MORE FEATURES ======================== -->
+    <section class="part4" aria-label="Additional features">
+      <div class="part4-bg" aria-hidden="true"></div>
+      <div class="content-box">
+        <p class="overline overline--white">Why CHOICE</p>
+        <h2 class="title-max title-max--white">Everything You Need<br />to Trade Smarter</h2>
+
+        <div class="part4-grid">
+          <!-- Row 1 -->
+          <div class="p4-card" aria-label="Social-Native Trading">
+            <div class="p4-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </div>
+            <h3 class="p4-title">Social-Native Trading</h3>
+            <p class="p4-desc">Trade directly within the context of X conversations. Shift from debate to position without leaving your feed.</p>
+            <div class="p4-card-noise" aria-hidden="true"></div>
+          </div>
+
+          <div class="p4-card" aria-label="Zero Friction Onboarding">
+            <div class="p4-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="p4-title">Zero-Friction Onboarding</h3>
+            <p class="p4-desc">Get started in under 60 seconds. Social login, instant deposit via Base Chain USDC, and you're live.</p>
+            <div class="p4-card-noise" aria-hidden="true"></div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="p4-card" aria-label="Order Books and LMSR">
+            <div class="p4-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="p4-title">Order Books + LMSR</h3>
+            <p class="p4-desc">Dual liquidity model ensures deep markets for viral events and continuous pricing for niche topics alike.</p>
+            <div class="p4-card-noise" aria-hidden="true"></div>
+          </div>
+
+          <div class="p4-card" aria-label="AI-Powered Resolution">
+            <div class="p4-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            </div>
+            <h3 class="p4-title">AI-Driven Accuracy</h3>
+            <p class="p4-desc">Markets generated and resolved by AI — more markets, faster settlement, higher transparency, fewer disputes.</p>
+            <div class="p4-card-noise" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== PART 5: CTA BANNER ======================== -->
+    <section class="part5" aria-label="Call to action">
+      <div class="part5-inner">
+        <div class="part5-noise" aria-hidden="true"></div>
+        <div class="part5-content">
+          <h2 class="part5-title">Your opinion has value.<br /><em>Start trading it.</em></h2>
+          <p class="part5-sub">Join thousands of traders turning social discourse into real earnings.</p>
+          <div class="part5-btns">
+            <a href="https://app.choice.markets" class="btn btn-white" id="cta-final-app" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              Launch App
+            </a>
+            <a href="https://t.me/choicemarkets" class="btn btn-outline-white" id="cta-final-tg" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+              Join Telegram
+            </a>
+          </div>
+        </div>
+        <div class="part5-visual" aria-hidden="true">
+          <div class="globe-rings">
+            <div class="globe-ring globe-ring--1"></div>
+            <div class="globe-ring globe-ring--2"></div>
+            <div class="globe-ring globe-ring--3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /home -->
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-noise" aria-hidden="true"></div>
+    <div class="content-box">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <svg width="100" height="26" viewBox="0 0 110 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="CHOICE logo">
+            <text x="0" y="22" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700" fill="#ffffff" letter-spacing="2">CHOICE</text>
+          </svg>
+        </div>
+        <p class="footer-brief">AI-powered prediction markets<br />for the social age of finance.</p>
+        <div class="footer-socials">
+          <a href="https://twitter.com/choicemarkets" class="footer-social-btn" id="footer-twitter" target="_blank" rel="noopener noreferrer" aria-label="Follow CHOICE on X (Twitter)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.264 5.633 5.9-5.633zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Follow on X
+          </a>
+          <a href="https://t.me/choicemarkets" class="footer-social-btn" id="footer-telegram" target="_blank" rel="noopener noreferrer" aria-label="Join CHOICE Telegram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+            Telegram
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-col">
+          <p class="footer-col-title">Product</p>
+          <a href="#features" class="footer-link">Features</a>
+          <a href="#markets" class="footer-link">Markets</a>
+          <a href="https://app.choice.markets" class="footer-link" target="_blank" rel="noopener noreferrer">Launch App</a>
+          <a href="#" class="footer-link">Roadmap</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Resources</p>
+          <a href="#docs" class="footer-link">Documentation</a>
+          <a href="#" class="footer-link">API Reference</a>
+          <a href="#" class="footer-link">Blog</a>
+          <a href="#" class="footer-link">Research</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Company</p>
+          <a href="#" class="footer-link">About</a>
+          <a href="#" class="footer-link">Careers</a>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 CHOICE Markets. All rights reserved.</p>
+      <p class="footer-disclaimer">Prediction markets involve financial risk. Trade responsibly.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
